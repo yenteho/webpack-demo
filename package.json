@@ -4,11 +4,16 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "product": "webpack -p",
-    "dev": "webpack-dev-server"
+    "prod": "yarn run clean && NODE__ENV=production webpack -p",
+    "dev": "webpack-dev-server",
+    "clean": "rimraf ./dist/*"
   },
   "license": "MIT",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.11",
     "extract-text-webpack-plugin": "4.0.0-beta.0",
     "file-loader": "^1.1.11",
@@ -18,6 +23,9 @@
     "node-sass": "^4.7.2",
     "pug": "^2.0.3",
     "pug-html-loader": "^1.1.5",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "rimraf": "^2.6.2",
     "sass-loader": "^6.0.7",
     "style-loader": "^0.20.3",
     "webpack": "^4.1.1",
